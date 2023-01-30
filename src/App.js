@@ -1,15 +1,19 @@
-import ReactDom from "react-dom";
+import ReactDOM from "react-dom";
+import React,{useState,useEffect} from 'react';
 import "./App.css";
 import Maincompo from "./Components/MainComponent/Maincompo";
 
+ 
+
+
+ 
 function App() {
+ 
+ 
+   
+ 
+    return (<Maincompo/>)
+        
 
-
-  return (
-    <div className="card">
-      <Maincompo/>
-    </div>
-  );
-}
-
+  }
 export default App;

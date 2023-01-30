@@ -1,9 +1,17 @@
-import react from 'react';
-import HeaderNav from '../Header/HeaderNav';
+import React, { useState, useEffect } from "react";
+import SummaryPage from "../Cart/SummaryPage";
+import HeaderNav from "../Header/HeaderNav";
+
 const Maincompo = () => {
-    return(<div className="container fluied">
-        <HeaderNav/>
-        
-    </div>);
-}
+  const [isVisible, setVisible] = useState(false);
+
+ 
+    return (
+      <div className="container fluied">
+      <HeaderNav changestate ={()=>setVisible(false)} /> 
+    
+      </div>
+    );
+ 
+};
 export default Maincompo;

@@ -41,36 +41,35 @@ const Products = () => {
   ];
 
   return (
-    <div className="Card" >
-        <div>
-            <center><h1>Music</h1> </center>
-            </div>
-        <Card> 
-      <div className="row" >
-        {productsArr.map((data) => (
-           
-            <div className="col-md-5">
-          <Card style={{ width: "18rem" }}>
-            <center> 
-            <Card.Title>{data.title} </Card.Title>
-            </center>
-            <Card.Img variant="top" src={data.imageUrl} />
-            <Card.Body>
-
-              <Card>
-                <Card.Title>
-                  <center>
-                  <h4> {data.price} </h4>
-                  </center>
-                </Card.Title>
-                <Button variant="primary">Add to Cart</Button>
+    <div className="Card align-middle" >
+      <Card.Title>
+        <center>
+          <h1>Music</h1>{" "}
+        </center>
+      </Card.Title>
+      <Card>
+        <Row md={2} xs={1} lg={3} className="g-3">
+          {productsArr.map((data) => (
+            <Col className="col-md-10">
+              <Card style={{ width: "18rem" }}>
+                <center>
+                  <Card.Header><h4>{data.title}  </h4></Card.Header>
+                </center>
+                <Card.Img variant="top" src={data.imageUrl} />
+                <Card.Body>
+                  <Card>
+                    <Card.Subtitle>
+                      <center>
+                        <h3 className="ms-2 "> {data.price} </h3>
+                      </center>
+                    </Card.Subtitle>
+                    <Button variant="primary">Add to Cart</Button>
+                  </Card>
+                </Card.Body>
               </Card>
-            </Card.Body>
-          </Card>
-          </div>
-        
-        ))}
-      </div>
+            </Col>
+          ))}
+        </Row>
       </Card>
     </div>
   );
